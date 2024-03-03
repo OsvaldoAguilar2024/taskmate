@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+ <title><i class="fa fa-registered" aria-hidden="true"></i>Register</title>
+{% endblock title %}
+
+{% block content %}
+
+
+
+<div class="container"> 
+
+</br>
+
+    <h2> Registrese en Taskmate</h2>
+
+    <form method="POST" class="mt-5" col-6 >
+        {% csrf_token %}
+        {{register_form | crispy }}
+
+
+        <button type "submit" class="btn btn-primary mb-5 ">Registrese</button>
+    </form>
+
+    {% if messages %}
+        {% for message in messages%}
+        <div
+            class="alert alert-primary alert-dismissible fade show"
+            role="alert"
+        >
+            <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="{{ message }}"
+                aria-label="Close"
+            ></button>
+            <strong>Alerta </strong>   {{ message }} 
+        </div>
+        
+        <script>
+            var alertList = document.querySelectorAll(".alert");
+            alertList.forEach(function (alert) {
+                new bootstrap.Alert(alert);
+            });
+        </script>
+        
+            </div>
+        {% endfor %}
+    {% endif %}
+
+
+</div>
+
+
+{% endblock content %}
+

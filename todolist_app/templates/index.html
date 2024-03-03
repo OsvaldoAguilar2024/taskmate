@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{%load static %}
+
+
+{% block title %}
+ <title>Home page</title>
+{% endblock title %}
+
+
+{% block content %}
+
+<div class="container"> 
+    <div class="row mt-5">
+        <div class="col-lg-4">
+           <img src="{% static 'images/stickynotes.jpg' %}" alt="Notes" class="rounded-lg shadow" with="360" height="250">
+        </div>
+        <div class="col-lg-4">
+            <img  src="{% static 'images/stickynotes-1.jpg' %}" alt="Notes" class="rounded-lg shadow" with="360" height="250">
+        </div>
+        <div class="col-lg-4">
+            <img src="{% static 'images/stickynotes-2.jpg' %}" alt="Notes" class="rounded-lg shadow" with="360" height="250">
+        </div>
+
+    </div>
+
+    <div class="row mt-5">
+
+        <div class="col-md-10">
+            <center><p class="h1 textprimary " >Facil de usar en cualquier momento</p></center>
+            <center><p class="h3 mt3"Planee>Las actividades del dia mejor. Organice su vida</p></center>
+            <center><p class="h5">TASKMATE mantenga sus tareas ordenadas en un solo sitio</p></center>
+            <center><a href="{% url 'todolist' %}"><button type="button" class="btn btn-primary btn-lg mt=3">Empieze aqui</button></a></center>
+        </div>
+    </div>
+ 
+
+</div>
+
+
+{% endblock content %}
