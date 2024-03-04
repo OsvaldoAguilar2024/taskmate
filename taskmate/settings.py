@@ -91,7 +91,6 @@ DATABASES = {
     }
 }
 
-postgres.railway.internal
 
 
 # Password validation
