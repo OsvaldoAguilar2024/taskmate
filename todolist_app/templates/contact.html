@@ -4,12 +4,39 @@
  <title>Contactos </title>
 {% endblock title %}
 
+
 {% block content %}
 
 <div class="container"> 
-     <div class="container">
-        <h1>{{contact_text}}</h1>    
-    </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Contactos</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <form>
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea class="form-control" id="mensaje" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+            </div>
+
+    
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="<KEY>" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="<KEY>" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="<KEY>" crossorigin="anonymous"></script>
 
 </div>
 
